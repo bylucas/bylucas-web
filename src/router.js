@@ -50,7 +50,7 @@ const routes = [
       {
         path: "/templatestrings",
         name: "TemplateStrings",
-        component: () => import("./pages/java/basics/TemplateStrings.vue"),
+        component: () => import("./pages/java/basics/Templatestrings.vue"),
       },
       {
         path: "/arrays",
