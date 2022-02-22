@@ -378,7 +378,7 @@ const routes = [
       {
         path: "/dropdown",
         name: "Dropdown",
-        component: () => import("./pages/java/ui-elements/Dropdown.vue"),
+        component: () => import("./pages/java/ui-elements/DropDown.vue"),
       },
       {
         path: "/signupform",
