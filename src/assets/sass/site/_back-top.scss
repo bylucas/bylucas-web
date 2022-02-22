@@ -1,0 +1,39 @@
+// =======================
+// Bck to top
+// =======================
+
+ .back-to-top-fade-enter-active, .back-to-top-fade-leave-active {
+  transition: opacity .7s;
+}
+.back-to-top-fade-enter, .back-to-top-fade-leave-to{
+  opacity: 0;
+}
+
+.vue-back-to-top{
+  position: fixed;
+  z-index: 1000;
+  cursor:pointer;
+  bottom: 10px;
+  right: 0px;
+}
+
+.vue-back-to-top .default {
+  width: 50px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgba(0, 0, 0, .8);
+  @include border-left-radius( 5px);
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+@include media(900) {
+  .vue-back-to-top .default:hover {
+    background-color: $heading-color;
+  }
+}
+.vue-back-to-top .default span{
+  color:#ffffff;
+  font-size: 0.9rem;
+}

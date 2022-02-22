@@ -1,0 +1,70 @@
+// =======================
+// Top Nav
+// =======================
+
+  .nav-wrap {
+background-color: $black;
+}
+
+nav {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+  .center {
+    overflow: hidden;
+    white-space: nowrap;
+
+  }
+    
+.internal {
+      font-size: .9rem;
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 20px 10px;
+      color: #BDBDBD;
+}
+     .internal a {
+        color: $white;
+ }       
+
+      .internal a:hover {
+          color:$hover-nav;
+padding-bottom: 16px;
+        }
+
+  nav button {
+    font-size: 1.2rem;
+    padding: 19px 0;
+    width: 25px;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  nav #left-button {
+    display: none;
+  }
+  
+  nav .router-link-active {
+    color:$hover-nav !important;
+    padding-bottom: 16px;
+    transition: none;
+    cursor: default;
+  }
+
+  @include media(600) {
+  nav button {
+    @include hide-visually;
+  }
+}
+
+@include media(700) {
+  .internal {
+    font-size: 1.1rem;
+    padding:19px 13px;
+  }
+}
