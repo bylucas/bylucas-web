@@ -11,7 +11,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, .7);
   display: table;
-  transition: opacity .3s ease;
+  //transition: opacity .3s ease;
 }
 
 .modal-container {
@@ -22,10 +22,10 @@
   width: 300px;
   margin: 0px auto;
   padding: 15px;
-  background-color: #E1E0FF;
+  background-color: #efeff4;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-  transition: all .3s ease;
+  //transition: all .3s ease;
   z-index: 100;
 }
 
@@ -44,18 +44,15 @@
   padding: 25px 15px;
 }
 
-.modal-enter {
+.modal-enter-from,
+.modal-leave-to {
   opacity: 0;
-}
-
-.modal-leave-active {
-  opacity: 0;
-}
-
-.modal-enter .modal-container,
-.modal-leave-active .modal-container {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+.modal-leave-active,
+.modal-enter-active {
+  transition: all .8s ease;
 }
 
 @include media(700) {

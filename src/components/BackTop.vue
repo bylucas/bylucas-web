@@ -38,7 +38,7 @@ export default {
 
   methods: {
     catchScroll () {
-      this.visible = (window.pageYOffset > parseInt(this.visibleoffset))
+      this.visible = (window.scrollY > parseInt(this.visibleoffset))
     },
     backToTop () {
       window.smoothscroll()
