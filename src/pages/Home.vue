@@ -1,4 +1,5 @@
 <template>
+  <div class="article">
   <div class="outer-header">
     <Header :title="title" />
   </div>
@@ -52,6 +53,7 @@
       ab tempore et optio?
     </p>
   </div>
+</div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
 <footer class="footer">
- <p>&copy;2022 howardlucas | <a id="contact" @click="showModalContact = true">Contact</a> | <a id="privacy" @click="showModalPrivacy = true">Privacy</a></p>
+ <p>&copy;2024 howardl | <a id="contact" @click="showModalContact = true">Contact</a> | <a id="privacy" @click="showModalPrivacy = true">Privacy</a></p>
  <transition name="modal">
  <modal v-if="showModalContact" @close="showModalContact = false">
 

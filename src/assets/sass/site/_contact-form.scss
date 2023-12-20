@@ -4,7 +4,7 @@
 
   .contact-form {
   z-index: 300;
-  text-align: center;
+  text-align: center; 
 }
   .contact-form h2 {
     font-size: 1.5rem;
@@ -13,13 +13,14 @@
   }
 
 .form-wrap {
-  //margin-bottom: 1rem;
+  position: relative;
+  height: 300px;
 }
 
 .success {
 font-size: 1.1rem;
 padding: 10px;
-margin-bottom: $spacer;
+//margin-bottom: $spacer;
 }
 
 .success {
@@ -32,25 +33,20 @@ margin-bottom: $spacer;
    padding:10px 6px;
    margin-bottom: 1.5rem;
    width: 100%;
-  border: #7F7F7F 1px solid;
-  border-radius: 5px;
+   border: none;
+  border-bottom: #7F7F7F 1px solid;
    line-height: 1.3;
-   background-color: #F6F6F6;
+   background-color: transparent;
   transition: border-color 0.15s linear;
 }
 
 .subscribe:focus {
-  border-color: #D9D9D9;
+  border-bottom: $link-color 1px solid;
 }
 
 button {
-  margin: 0 auto;
-   padding: 10px 15px;
    text-transform: uppercase;
    letter-spacing: 1px;
-   //background-color: #5E6FD9;
-   //color: white;
-   //margin-top: 1rem;
   opacity: .9;
 }
 

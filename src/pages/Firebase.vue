@@ -1,4 +1,5 @@
 <template>
+  <div class="article">
   <div class="outer-header">
     <Header :picture="backgroundImage" :title="title" />
   </div>
@@ -25,6 +26,7 @@
         </div>
       </transition>
     </router-view>
+  </div>
   </div>
 </template>
 

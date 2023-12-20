@@ -22,7 +22,7 @@
   width: 300px;
   margin: 0px auto;
   padding: 15px;
-  background-color: #efeff4;
+  background-color: #BAC7D6;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   //transition: all .3s ease;
@@ -36,7 +36,7 @@
   cursor: pointer;
   font-weight: 700;
   font-size: 1.4rem;
-  color: $link-color;
+  color: $black;
 }
 
 .modal-body {
@@ -65,6 +65,6 @@
 @include media(900) {
   .modal-close:hover {
   
-    color: $hover-color;
+    color: tint($black, 20%);
   }
 }

@@ -30,7 +30,7 @@
 
 @include media(900) {
   .vue-back-to-top .default:hover {
-    background-color: $heading-color;
+    background-color: $hover-nav;
   }
 }
 .vue-back-to-top .default span{

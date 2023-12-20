@@ -10,8 +10,12 @@
      <input class="subscribe" type="email" v-model="email" placeholder="youremail@example.com" required/>
     
     <textarea class="subscribe" v-model="message" placeholder="How can we help?" required></textarea>
-    <div class="success">{{ success }}</div>
+    <transition name="success">
+    <div class="success" v-if="showSuccess">You did it...</div>
+  </transition>
+  
     <button>Send</button>
+  
         </form>
             </div>
         </section>
@@ -31,7 +35,7 @@ export default {
     const name = ref('')
     const email = ref('')
     const message = ref('')
-    const success = ref(null)
+    const showSuccess = ref(false)
 
     const handleSubmit = async () => {
       const colRef = collection(db, 'contacts')
@@ -43,19 +47,34 @@ export default {
            createdAt: serverTimestamp()
       })
 
-            success.value = 'you did it'
+            showSuccess.value = true
 
           setTimeout(() => {
-            success.value = '',
+            showSuccess.value = false,
             name.value = '',
             email.value = '',
             message.value = ''
               }, 3000);
             }
 
-    return { handleSubmit, name, email, message, success }
+    return { handleSubmit, name, email, message, showSuccess }
   }
 }
 
 </script>
+
+<style scoped>
+ /* enter transitions */
+ .success-enter-from {
+  opacity: 0;
+  }
+  /* leave transitions */
+  .success-leave-to {
+    opacity: 0;
+  }
+  .success-enter-active,
+  .success-leave-active {
+    transition: all .7s ease;
+  }
+</style>
 

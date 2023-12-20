@@ -1,4 +1,5 @@
 <template>
+  <div class="article">
 	<div class="outer-header">
   <Header :picture="backgroundImage" :title="title" />
   </div>
@@ -143,16 +144,16 @@
 <hr>
 
     <router-view v-slot="{ Component }">
-      
+    
     <transition name="fade" mode="out-in">
-      <div>
+     
       <component :is="Component" :key="$route.path"></component>
-      </div>
+     
     </transition>
     
   </router-view>
  </div>
-
+</div>
 </template>
 
 <script>
